@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
             Bitmap bitmap = BitmapFactory.decodeResource(res, R.drawable.picture);
             mImBlur.setImageBitmap(BlurUtil.blur(bitmap,10));
         });
+
+
     }
 
 
