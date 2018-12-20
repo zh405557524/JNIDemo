@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,9 +19,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Resources res = getResources();
         mImBlur = findViewById(R.id.iv_blur);
+        TextView textView = findViewById(R.id.tv);
         findViewById(R.id.bt_blur).setOnClickListener(view -> {
             Bitmap bitmap = BitmapFactory.decodeResource(res, R.drawable.picture);
-            mImBlur.setImageBitmap(BlurUtil.blur(bitmap,10));
+            BlurUtil.blur(bitmap, 40);
+            mImBlur.setImageBitmap(bitmap);
+            //            textView.setText(BlurUtil.blur("fasd", 0));
+
         });
 
 

@@ -1,7 +1,6 @@
 package com.soul.jnidemo;
 
-import android.graphics.Bitmap;
-import android.widget.SimpleCursorTreeAdapter;
+
 
 /**
  * @描述：TODO
@@ -13,12 +12,12 @@ public class BlurUtil {
 
     // Used to load the 'native-lib' library on application startup.
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("blurlib");
     }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    public static native Bitmap blur(Bitmap bitmap, int radius);
+    public static native void blur(Object bitmap, int radius);
 }
